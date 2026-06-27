@@ -53,31 +53,60 @@ public class LinkedList{
 
         return head;
     }
+
+    static Node takeInputBetter(){
+        int data;
+        System.out.println("Enter data: ");
+        data = sc.nextInt();
+        // create head and tail, head -> reference to firstNode and tail -> reference to lastNode
+        Node head = null;
+        Node tail = null;
+        while(data != -1){
+            // create a new Node with the data
+            Node newNode = new Node(data);
+            if(head == null){
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail = newNode;
+            }
+            System.out.println("Enter data again: ");
+            data = sc.nextInt();
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
-        // Node n1 = new Node(10);
-        // Node n2 = new Node(20);
-        // Node n3 = new Node(30);
-        // Node n4 = new Node(40);
+        Node n1 = new Node(10);
+        Node n2 = new Node(20);
+        Node n3 = new Node(30);
+        Node n4 = new Node(40);
 
-        // n1.next = n2;
-        // n2.next = n3;
-        // n3.next = n4;
+        n1.next = n2;
+        n2.next = n3;
+        n3.next = n4;
 
-        //Node head = n1;
-        //System.out.println("Printing head's data:");
-        // System.out.println(head.data); // printing head's data
+        Node head = n1;
+        System.out.println("Printing head's data:");
+        System.out.println(head.data); // printing head's data
 
         // print n2 data using n1
-        // System.out.println("n2 data using n1: ");
-        // System.out.println(n1.next.data);
+        System.out.println("n2 data using n1: ");
+        System.out.println(n1.next.data);
 
-        // printLL(head);
+        printLL(head);
 
-        // int length = calculateLength(head);
-        // System.out.println("length of linked list is: " + length);
+        int length = calculateLength(head);
+        System.out.println("length of linked list is: " + length);
 
-        Node updatedHead = takeInput();
-        printLL(updatedHead);
+        // Node updatedHead = takeInput();
+        // printLL(updatedHead);
+
+        Node betterHead = takeInputBetter();
+
+        printLL(betterHead);
+
 
     }
 }
