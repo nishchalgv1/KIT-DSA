@@ -19,6 +19,16 @@ public class LinkedList{
             temp = temp.next;
         }
     }
+
+    static int calculateLength(Node head){
+        Node temp = head;
+        int counter = 0;
+        while(temp != null){
+            counter++;
+            temp = temp.next;
+        }
+        return counter;
+    }
     public static void main(String[] args) {
         Node n1 = new Node(10);
         Node n2 = new Node(20);
@@ -38,6 +48,9 @@ public class LinkedList{
         System.out.println(n1.next.data);
 
         printLL(head);
+
+        int length = calculateLength(head);
+        System.out.println("length of linked list is: " + length);
 
     }
 }

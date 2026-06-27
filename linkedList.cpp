@@ -33,6 +33,16 @@ void printLL(Node* head){
     }
 }
 
+int calculateLength(Node* head){
+    Node* temp = head;
+    int counter = 0;
+    while(temp != nullptr){
+        counter++;
+        temp = temp -> next;
+    }
+    return counter;
+}
+
 int main(){
     // statically
     Node n1(10);
@@ -55,4 +65,7 @@ int main(){
     // cout << "print n3 data using n2: " << n2.next -> data << endl;
 
     printLL(head);
+    cout << endl;
+    int length = calculateLength(head);
+    cout << "length of linked list is: " << length << endl;
 }
