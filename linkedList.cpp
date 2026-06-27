@@ -23,14 +23,6 @@ void printLL(Node* head){
         cout << temp -> data << " ";
         temp = temp -> next;
     }
-    cout << endl;
-    // print linked list twice
-    cout << "Print linked list twice: " << endl;
-    temp = head;
-    while(temp != NULL){
-        cout << temp -> data << " ";
-        temp = temp -> next;
-    }
 }
 
 int calculateLength(Node* head){
@@ -41,6 +33,32 @@ int calculateLength(Node* head){
         temp = temp -> next;
     }
     return counter;
+}
+
+Node* takeInput(){
+    int data;
+    cout << "Enter data: " << endl;
+    cin >> data;
+
+    // create head of the linked list
+    Node* head = NULL;
+    while(data != -1){
+        // create the new node with the data
+        Node* newNode = new Node(data);
+        if(head == NULL){
+            head = newNode;
+        }else{
+            // figure out the address of lastNode and append the newNode
+            Node* temp = head;
+            while(temp -> next != NULL){
+                temp = temp -> next;
+            }
+            temp -> next = newNode;
+        }
+        cout << "Enter data again: " << endl;
+        cin >> data;
+    }
+    return head;
 }
 
 int main(){
@@ -64,8 +82,11 @@ int main(){
     // cout << "print n2 data using n1: " << n1.next ->data << endl;
     // cout << "print n3 data using n2: " << n2.next -> data << endl;
 
-    printLL(head);
-    cout << endl;
-    int length = calculateLength(head);
-    cout << "length of linked list is: " << length << endl;
+    // printLL(head);
+    // cout << endl;
+    // int length = calculateLength(head);
+    // cout << "length of linked list is: " << length << endl;
+
+    Node* updatedHead = takeInput();
+    printLL(updatedHead);
 }
