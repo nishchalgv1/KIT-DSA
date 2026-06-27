@@ -61,6 +61,42 @@ Node* takeInput(){
     return head;
 }
 
+Node* takeInputBetter(){
+    int data;
+    cout << "Enter data: " << endl;
+    cin >> data;
+
+    Node* head = nullptr;
+    Node* tail = nullptr;
+
+    while(data != -1){
+        Node* newNode = new Node(data);
+        if(head == nullptr){
+            head = newNode;
+            tail = newNode;
+        }else{
+            tail -> next = newNode;
+            tail = newNode; // updating the tail
+        }
+        cout << "Enter data again:" << endl;
+        cin >> data;
+    }
+    return head;
+}
+
+void printINode(Node* head, int i ){
+    int counter = 0;
+    Node* temp = head;
+    while(temp != nullptr){
+        if(counter == i){
+            cout << temp -> data << endl;
+            return;
+        }
+        counter++;
+        temp = temp -> next;
+    }
+}
+
 int main(){
     // statically
     Node n1(10);
@@ -87,6 +123,12 @@ int main(){
     // int length = calculateLength(head);
     // cout << "length of linked list is: " << length << endl;
 
-    Node* updatedHead = takeInput();
-    printLL(updatedHead);
+    // Node* updatedHead = takeInput();
+    // printLL(updatedHead);
+
+    Node* betterHead = takeInputBetter();
+    // printLL(betterHead);
+
+    cout << "Print ith node: " << endl;
+    printINode(betterHead, 2);
 }

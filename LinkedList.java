@@ -77,6 +77,19 @@ public class LinkedList{
         return head;
     }
 
+    static void printINode(Node head, int i){
+        int counter = 0;
+        Node temp = head;
+        while(temp != null){
+            if(counter == i){
+                System.out.println(temp.data);
+                return;
+            }
+            counter++;
+            temp = temp.next;
+        }
+    }
+
     public static void main(String[] args) {
         Node n1 = new Node(10);
         Node n2 = new Node(20);
@@ -105,8 +118,10 @@ public class LinkedList{
 
         Node betterHead = takeInputBetter();
 
-        printLL(betterHead);
+        // printLL(betterHead);
 
+        printINode(betterHead, 2);
+ 
 
     }
 }
