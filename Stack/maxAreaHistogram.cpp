@@ -54,27 +54,39 @@ class Solution {
         // find the next smaller element in left for every elem in the given array
         vector<int> nsl = nextSmallerLeft(arr);
         vector<int> nsr = nextSmallerRight(arr);
-        
-        vector<int> width(n);
-        // fill the width array
+
+         // find max_area
+        int max_area = INT_MIN;
         for(int i = 0; i < n; i++){
-            width[i] = nsr[i] - nsl[i] - 1;
-        }
-        
-        vector<int> area(n);
-        for(int i = 0; i < n; i++){
-            area[i] = arr[i] * width[i];
-        }
-        
-        // find out the max area
-        int max_area = INT_MIN; 
-        for(int i = 0; i < n; i++){
-            int curr_area = area[i];
-            if(curr_area > max_area){
-                max_area = curr_area;
+            int width = nsr[i] - nsl[i] - 1;
+            int height = arr[i];
+            int area = width * height;
+            if(area > max_area){
+                max_area = area;
             }
         }
-        
         return max_area;
+        
+        // vector<int> width(n);
+        // // fill the width array
+        // for(int i = 0; i < n; i++){
+        //     width[i] = nsr[i] - nsl[i] - 1;
+        // }
+        
+        // vector<int> area(n);
+        // for(int i = 0; i < n; i++){
+        //     area[i] = arr[i] * width[i];
+        // }
+        
+        // // find out the max area
+        // int max_area = INT_MIN; 
+        // for(int i = 0; i < n; i++){
+        //     int curr_area = area[i];
+        //     if(curr_area > max_area){
+        //         max_area = curr_area;
+        //     }
+        // }
+        
+        // return max_area;
     }
 };
