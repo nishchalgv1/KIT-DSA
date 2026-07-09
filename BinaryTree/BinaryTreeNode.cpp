@@ -1,18 +1,6 @@
 #include <iostream>
+#include "BinaryTreeNode.h"
 using namespace std;
-
-class BinaryTreeNode{
-    public:
-    int data;
-    BinaryTreeNode* left;
-    BinaryTreeNode* right;
-
-    BinaryTreeNode(int val){
-        this -> data = val;
-        left = nullptr;
-        right = nullptr;
-    }
-};
 
 void print(BinaryTreeNode* root){
     if(root == NULL) return;
