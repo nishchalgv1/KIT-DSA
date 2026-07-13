@@ -84,21 +84,24 @@ int main(){
 
     for(int i = 1; i <= n; i++){
         int elem;
-        cout << "Enter elem: " << endl;
         cin >> elem;
         pq.insert(elem);
     }
 
-    cout << "Size of Priority Queue before removing any elem: " << pq.getSize() << endl;
-    cout << "Min elem of the Priority Queue: " << pq.getMin() << endl;
-    cout << "Is Priority Queue empty ? " << pq.isEmpty() << endl;
+    // cout << "Size of Priority Queue before removing any elem: " << pq.getSize() << endl;
+    // cout << "Min elem of the Priority Queue: " << pq.getMin() << endl;
+    // cout << "Is Priority Queue empty ? " << pq.isEmpty() << endl;
 
-    pq.removeMin();
-    cout << "Size after removing min:  " << pq.getSize() << endl;
+    // pq.removeMin();
+    // cout << "Size after removing min:  " << pq.getSize() << endl;
 
-    pq.removeMin();
-    cout << "Size after removing two elem: " << pq.getSize() << endl;
+    // pq.removeMin();
+    // cout << "Size after removing two elem: " << pq.getSize() << endl;
 
     // print all element of the Min Heap in sorted order
+
+    while(!pq.isEmpty()){
+        cout << pq.removeMin() << " ";
+    }
 
 }
