@@ -1,3 +1,4 @@
+package LinkedList;
 // https://leetcode.com/problems/middle-of-the-linked-list/
 
 class Solution {

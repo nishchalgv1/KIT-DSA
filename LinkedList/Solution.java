@@ -1,3 +1,4 @@
+package LinkedList;
 public class Solution {
     public int calculateLength(ListNode head){
         int counter = 0;

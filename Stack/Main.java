@@ -4,6 +4,10 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args){
         Stack<Integer> st = new Stack<>();
+        // Stack<Character> charSt = new Stack<>();
+        // Stack<Boolean> boolSt = new Stack<>();
+        // Stack<String> strSt = new Stack<>();
+        // Stack<Double> doubleSt = new Stack<>();
 
         // insert some elements
         st.push(10);

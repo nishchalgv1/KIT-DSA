@@ -31,19 +31,6 @@ void printBinaryTree(BinaryTreeNode* root){
     printBinaryTree(root -> left);
     printBinaryTree(root -> right);
 
-    // cout << "root: " << root -> data << " ";
-
-    // if(root -> left){
-    //     cout << "L: " << root -> left -> data << " ";
-    // }
-
-    // if(root -> right){
-    //     cout << "R: " << root -> right -> data << " ";
-    // }
-
-    // printBinaryTree(root -> left);
-    // printBinaryTree(root -> right);
-
 }
 
 int main(){

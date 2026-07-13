@@ -1,3 +1,4 @@
+// leetcode 40
 class Solution {
     void getAllCombinations(vector<int>& candidates, int idx, int target, vector<int> output, vector<vector<int>>& finalOutput){
         // base case
