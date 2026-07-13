@@ -72,5 +72,26 @@ class PriorityQueue{
 };
 
 int main(){
+    PriorityQueue pq;
 
+    int n;
+    cout << "Enter n: " << endl;
+    cin >> n;
+
+    for(int i = 1; i <= n; i++){
+        int elem;
+        cout << "Enter " << i << " element " << endl;
+        cin >> elem;
+        pq.insert(elem);
+    }
+
+    cout << "Size: " << pq.getSize() << endl;
+
+    // print all elements in decreasing order
+    cout << "Printing elements in decreasing order: " << endl;
+    while(!pq.isEmpty()){
+        cout << pq.removeMax() << " ";
+    }
+
+    cout << "is empty? : " << pq.isEmpty() << endl;
 }
