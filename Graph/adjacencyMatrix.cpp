@@ -14,7 +14,7 @@ int main(){
     // create a matrix of size (V + 1) * (V + 1)
     vector<vector<bool>> adj(V + 1, vector<bool>(V + 1, false));
 
-    // take edges input from the user
+    // take edges input from the user-
     for(int i = 1; i <= E; i++){
         int u, v;
         cout << "Enter u and v: " << endl;
