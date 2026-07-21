@@ -18,11 +18,6 @@ class Employee: public Engineer{
     int salary;
     string role;
 
-    Employee(int salary, int role){
-        this -> salary = salary;
-        this -> role = role;
-    }
-
     public:
     void aboutEmployee(){
         cout << "I work as a " << role << endl;
@@ -61,9 +56,9 @@ class Manager: public Employee{
 
 int main(){
     Manager manager("Bala", 500000, "Software Enginner", "IT", 30);
-    //manager.display();
+    manager.display();
 
-   // manager.aboutEmployee();
+   manager.aboutEmployee();
 
     manager.aboutEngineer();
 }

@@ -52,6 +52,8 @@ class Student{
 int main(){
     Student s1(60, "Coimbatore", "Amit");
     // s1.getMarks();
+    
+    
     s1.displayData();
 
     s1.setData("Rohan", 40, "Pondicherry");
